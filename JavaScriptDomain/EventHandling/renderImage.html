@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Render an image on click of a button</h1>
+    <!-- Button to trigger image rendering -->
+    <button id="renderBtn">Render Image</button>
+
+    <!-- Image element -->
+    <img
+      id="myImage"
+      style="display: none"
+      alt="Image not loaded"
+      width="300"
+    />
+    <script>
+      // Select the button and image elements
+      const button = document.getElementById("renderBtn");
+      const image = document.getElementById("myImage");
+
+      // Add click event listener to the button
+      button.addEventListener("click", function () {
+        // Check if the image has a 'src' attribute
+        const imgSrc = image.getAttribute("src");
+
+        if (!imgSrc) {
+          // If no source, set it and display the image
+          image.setAttribute("src", "./images/image.png");
+          image.style.display = "block"; // Show the image
+        }
+      });
+    </script>
+  </body>
+</html>

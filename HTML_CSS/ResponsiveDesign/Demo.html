@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        background-color: blue;
+        display: flex;
+        justify-content: space-around;
+      }
+      .item {
+        background-color: yellow;
+        height: 100px;
+        width: 100px;
+        margin: 5px;
+      }
+      /* media queries */
+      @media (max-width: 600px) {
+        /* maxwidth: works when dimension <=600px */
+        /* minwidth: works when dimension >=600px */
+        .container {
+          background-color: red;
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+    </div>
+  </body>
+</html>

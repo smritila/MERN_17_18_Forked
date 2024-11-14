@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rotate-box {
+        position: relative;
+        top: 20px;
+        left: 50px;
+        background-color: yellowgreen;
+        height: 250px;
+        width: 250px;
+        border-radius: 125px;
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        /* animation-delay: 5s; */
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: translateX(0) rotate(0deg);
+          top: 0;
+        }
+        100% {
+          transform: translateX(1000px) rotate(360deg);
+          top: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rotate-box"></div>
+  </body>
+</html>

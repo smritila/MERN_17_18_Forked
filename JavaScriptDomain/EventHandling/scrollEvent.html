@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 {
+        background-color: lightblue;
+        color: black;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+      }
+      .div2 {
+        background-color: yellow;
+        padding-bottom: 1000px;
+        position: relative;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <h1>This is a division</h1>
+    </div>
+    <div class="div2">This is only to provide scrolling effect</div>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        let div1 = document.querySelector(".div1");
+        if (window.scrollY >= 100) {
+          div1.style.backgroundColor = "black";
+          div1.style.color = "white";
+        } else {
+          div1.style.backgroundColor = "lightblue";
+          div1.style.color = "black";
+        }
+      });
+    </script>
+  </body>
+</html>

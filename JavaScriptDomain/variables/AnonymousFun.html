@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Print(name) {
+        // function declaration with parameters
+        document.write(name);
+      }
+
+      Print("Sachin");
+
+      let printFunc = function (name) {
+        // function expression with parameters
+        document.write(name);
+      };
+
+      printFunc("Dravid");
+
+      let arrowFunc = (name) => {
+        // arrow function with parameters
+        document.write(name);
+      };
+
+      arrowFunc("Rahul");
+    </script>
+  </body>
+</html>

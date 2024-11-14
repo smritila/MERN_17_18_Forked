@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: blue;
+        padding: 5px;
+        display: flex;
+        justify-content: end;
+      }
+      .item {
+        height: 50px;
+        width: 50px;
+        background-color: yellow;
+        margin: 5px;
+      }
+      .nav-link {
+        display: flex;
+      }
+      @media (max-width: 300px) {
+        .nav-link {
+          display: none;
+        }
+      }
+      @media (min-width: 300px) {
+        .burger {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-link">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+      </div>
+      <div class="item burger">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>

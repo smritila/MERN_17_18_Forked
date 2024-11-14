@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Function returning a promise vs Async Func</h1>
+    <script>
+      function myPromise() {
+        return new Promise((res, rej) => {
+          res({
+            name: "Anil",
+            age: 30,
+            occupation: "Software Engineer",
+          });
+        });
+      }
+
+      async function fetchData() {
+        // the promise is always fulfilled
+        return {
+          name: "John",
+          age: 25,
+          occupation: "Software Engineer",
+        };
+      }
+
+      let r1 = myPromise();
+      console.log(r1);
+      let r2 = fetchData();
+      console.log(r2);
+    </script>
+  </body>
+</html>

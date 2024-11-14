@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Given an array of objects, display the attributes in the form a table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Occupation</th>
+        </tr>
+      </thead>
+      <tbody id="i1"></tbody>
+    </table>
+
+    <script>
+      let arr = [
+        { name: "John", age: 25, occupation: "Developer" },
+        {
+          name: "Jane",
+          age: 30,
+          occupation: "Designer",
+        },
+        {
+          name: "Bob",
+          age: 35,
+          occupation: "Civil Engg",
+        },
+      ];
+
+      arr.map(DisplayTable);
+
+      function DisplayTable(obj) {
+        // join the object to the table
+        let row = document.createElement("tr");
+        row.innerHTML = `
+        <td>${obj.name}</td>
+        <td>${obj.age}</td>
+        <td>${obj.occupation}</td>
+        `;
+        document.getElementById("i1").appendChild(row);
+      }
+    </script>
+  </body>
+</html>
+
+<!-- given an array of strings return those in the form of h1 -->
+<!-- arr = ["Mango", "Guava", "Pineapple", "Strawberry", "Apple"] -->

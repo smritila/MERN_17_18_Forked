@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // lexical scope of a variable
+      //   closure
+      function function1() {
+        // nested functions
+        let outerVar = 15;
+        function funtion2() {
+          let innerVar = 20;
+          console.log("Outer variable inside" + "inner function()", outerVar);
+        }
+        return funtion2;
+      }
+
+      let inFunc = function1();
+      inFunc();
+
+      //   asynchronous callbacks
+    </script>
+  </body>
+</html>

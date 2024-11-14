@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array destructuring</h1>
+    <script>
+      let person = {
+        // breaking down the object into its constituent elements
+        name: "Sachin",
+        age: 25,
+        country: "India",
+      };
+
+      let arr = ["Apple", "Banana", "Pineapple", "Oranges", "Guava"];
+      let [f1, f2, f3, f4, f5] = arr;
+      //   array destructuring: breaking down the array to its individual elements
+      document.write(f1 + "<br>");
+      document.write(f2 + "<br>");
+      document.write(f3 + "<br>");
+      document.write(f4 + "<br>");
+      document.write(f5 + "<br>");
+
+      //   rest operator: ...
+      // always on the LHS of = sign
+      let [b1, b2, ...b3] = arr;
+      console.log(b1);
+      console.log(b2);
+      console.log(b3);
+
+      //   spread operator: ...
+      // always on the RHS of = sign
+
+      let basket1 = ["Grapes", "Mangoes", "Blackberry", "Strawberry"];
+      let basket2 = [
+        "Lady's Finger",
+        "Cucumber",
+        "Carrot",
+        "Brinjal",
+        "Bottle Gaurd",
+      ];
+      let basket3 = [...basket1, ...basket2];
+      console.log(basket3);
+      console.log(typeof basket3);
+
+      //   given an array [1,2,4,5,7,3], find two elements which sum upto 10
+      let arr1 = [1, 2, 4, 5, 7, 3];
+      let target = 10;
+      for (let i = 0; i < arr1.length - 1; i++) {
+        for (let j = i + 1; j <= arr1.length - 1; j++) {
+          if (arr1[i] + arr1[j] === target) {
+            console.log(arr1[i], arr1[j]);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

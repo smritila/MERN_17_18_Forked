@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>My Calculator</h1>
+    <div>
+      <h5>Add</h5>
+      <label for="number1">Number 1</label>
+      <input type="number" id="number1" name="number1" />
+      <label for="number2">Number 2</label>
+      <input type="number" id="number2" name="number2" />
+      <p>Sum is: <span id="sum"></span></p>
+      <button onclick="Add()">Add</button>
+    </div>
+
+    <div>
+      <h5>Division</h5>
+      <label for="div1">Number 1</label>
+      <input type="number" id="div1" name="div1" />
+      <label for="div2">Number 2</label>
+      <input type="number" id="div2" name="div2" />
+      <p>Quo is: <span id="quo"></span></p>
+      <button onclick="Div()">Division</button>
+    </div>
+
+    <script>
+      function Add() {
+        let num1 = document.getElementById("number1").value;
+        let num2 = document.getElementById("number2").value;
+        let sum = parseInt(num1) + parseInt(num2);
+        document.getElementById("sum").innerHTML = sum;
+      }
+
+      function Div() {
+        let num1 = document.getElementById("div1").value;
+        let num2 = document.getElementById("div2").value;
+        if (parseInt(num2) === 0) {
+          alert("Error: Division by zero is not allowed");
+        } else {
+          let quo = parseInt(num1) / parseInt(num2);
+          document.getElementById("quo").innerHTML = quo;
+        }
+      }
+    </script>
+  </body>
+</html>

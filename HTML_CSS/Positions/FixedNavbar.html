@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiexed Navbar</title>
+    <style>
+      .navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: navy;
+        color: white;
+        padding: 5px;
+        position: fixed;
+        width: 100%;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 5px;
+      }
+      h1 {
+        text-align: center;
+        padding-bottom: 1000px;
+        position: relative;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav-brand">My Brand</div>
+      <div class="nav-link">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">Blog</a>
+      </div>
+    </div>
+    <div class="main">
+      <h1>Main section here</h1>
+    </div>
+  </body>
+</html>

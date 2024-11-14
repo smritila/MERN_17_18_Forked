@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="firstName">First Name</label>
+    <input
+      type="text"
+      name="firstName"
+      placeholder="first name"
+      id="firstName"
+    />
+    <button onclick="submit()">submit</button>
+    <p>Entered Name is: <span id="name"></span></p>
+    <script>
+      // Get the input field and the span element
+      function submit() {
+        let inputEle = document.getElementById("firstName");
+        let paraEle = document.getElementById("name");
+        let firstName = inputEle.value;
+        paraEle.innerHTML = firstName;
+      }
+    </script>
+  </body>
+</html>

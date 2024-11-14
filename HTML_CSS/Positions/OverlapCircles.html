@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .circle-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .circle1 {
+        background-color: red;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: absolute;
+        top: 150px;
+        z-index: 1;
+      }
+      .circle2 {
+        background-color: yellow;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: absolute;
+        right: 50%;
+      }
+      .circle3 {
+        background-color: purple;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: absolute;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle-container">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+    </div>
+  </body>
+</html>

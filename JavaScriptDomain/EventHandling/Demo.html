@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Event Handling in JS</h1>
+    <p id="para1"></p>
+    <button>Click Me</button>
+
+    <script>
+      // Get the button element
+      const button = document.querySelector("button");
+
+      // handle click event
+      button.addEventListener("click", () => {
+        // Get the paragraph element
+        document.getElementById("para1").innerHTML = "Button clicked";
+      });
+    </script>
+  </body>
+</html>

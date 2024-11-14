@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>I have clicked <span id="count">0</span> times</h1>
+    <p>previous count: <span id="save"></span></p>
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="save()">Save</button>
+    <script>
+      let countEle = document.getElementById("count");
+      let clicks = 0;
+      function increment() {
+        clicks++;
+        countEle.innerHTML = clicks;
+      }
+      function decrement() {
+        clicks--;
+        countEle.innerHTML = clicks;
+      }
+      function save() {
+        let saveEle = document.getElementById("save");
+        saveEle.innerHTML = clicks;
+      }
+    </script>
+  </body>
+</html>

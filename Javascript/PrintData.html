@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>We are learning JS</h1>
+    <!-- embedded js : using script tag -->
+    <script>
+      // writing js code
+      document.write("I am writing on the html document" + "<br>");
+      document.write("I am another line" + "<br>");
+      //   alert("I am in an alert box");
+      console.log("I am in the console of the browser");
+
+      //   js variables
+      //   use keywords let, var and const
+      let myName = "Dinesh";
+      let myage = 20;
+      let phone = 1234567789;
+      phone = "myname";
+      document.write(phone + "<br>");
+      let accNo = 1234567890;
+      document.write(myName + "<br>");
+      document.write(myage + "<br>");
+      document.write("Original phone: " + phone + "<br>");
+      document.write(accNo + "<br>");
+
+      const bankBalance = 100; //value cannot be changed
+      document.write("Original balance: " + bankBalance + "<br>");
+      phone = 122334455;
+      document.write("Updated phone: " + phone + "<br>");
+
+      var address = "Bangalore";
+      document.write(address + "<br>");
+      address = "Delhi";
+      document.write(address + "<br>");
+    </script>
+  </body>
+</html>

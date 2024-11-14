@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .item {
+        width: 50%;
+        padding: 10px;
+      }
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fetch images</h1>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector(".container");
+      function display(arr) {
+        arr.map((pic) => {
+          const url = pic.url;
+          // create an div with class item
+          const item = document.createElement("div");
+          item.classList.add("item");
+          // add image inside item
+          const img = document.createElement("img");
+          // create src attribute for img
+          img.src = url;
+          img.alt = "error loading image";
+          // make img child of item div
+          item.appendChild(img);
+          // make item child of .container
+          container.appendChild(item);
+        });
+      }
+      // Fetch images from a URL
+      fetch("https://jsonplaceholder.typicode.com/photos")
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+          display(res);
+        })
+        .catch((err) => console.log(err));
+    </script>
+  </body>
+</html>

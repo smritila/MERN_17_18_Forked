@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Data From myjson.json</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      // fetch data from myjson.json file
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          console.log(res);
+          display(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+
+      function display(res) {
+        let tbody = document.getElementById("tbody");
+        console.log(typeof tbody);
+        for (let obj of res) {
+          let tr = document.createElement("tr");
+          let idcell = document.createElement("td");
+          let nameCell = document.createElement("td");
+          idcell.innerHTML = obj.id;
+          nameCell.innerHTML = obj.name;
+          tr.appendChild(idcell);
+          tr.appendChild(nameCell);
+          tbody.appendChild(tr);
+        }
+      }
+    </script>
+  </body>
+</html>

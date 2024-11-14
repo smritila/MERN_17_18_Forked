@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Nested Objects</h1>
+    <script>
+      // Define a nested object
+      let person = {
+        name: "Sachin",
+        age: 25,
+        nationality: "India",
+        address: {
+          street: "123 Main St",
+          city: "Mumbai",
+          pinCode: 123456,
+        },
+        play: function () {
+          document.write("Sachin plays cricket" + "<br>");
+        },
+      };
+
+      document.write(person.name + "<br>");
+      document.write(person.age + "<br>");
+      document.write(person.nationality + "<br>");
+      document.write(person.address.street + "<br>");
+      person.play();
+      //   add a new property into the objec
+      person.motherTongue = "Marathi";
+      console.log("After adding new property");
+      console.log(person);
+
+      //   delete a property
+      delete person.age;
+      console.log(person);
+
+      //   update a property
+      person.name = "Dravid";
+      console.log(person);
+
+      //   to stop adding or modify property
+      Object.freeze(person);
+      person.name = "Sachin"; //does not update
+      //   as object is freezed
+      console.log(person);
+    </script>
+    <!-- write a note on Object.seal() -->
+  </body>
+</html>

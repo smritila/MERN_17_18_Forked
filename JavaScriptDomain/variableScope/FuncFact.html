@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function addition(a, b) {
+        let r1 = a + b;
+        console.log("add = " + r1);
+        return function (c) {
+          let r = r1 - c;
+          console.log("sub = " + r);
+        };
+      }
+      let result = addition(10, 5);
+      result(8);
+
+      //   implement closures where an outer function returns an innerfunc and the innerfunc
+      // return another innerfunction
+      // outer -> childfunc1 -> childfunc2
+    </script>
+  </body>
+</html>

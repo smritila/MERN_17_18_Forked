@@ -1,0 +1,40 @@
+Create index.html
+Add CDN packages
+Write app.js
+Fuctional Component: 
+Create a new file called `App.js` in the `src` directory. This file will contain
+the main application code. In this file, we will create a functional component
+which returns 1 html element at a time.
+
+ReactDOM.render("<App/>", document.getElementById("root"))
+Write index.html
+
+with a div with id root
+attach app.js with babel cdn in html
+
+----------------------------------------------------------
+What is react?
+React is a JavaScript library for building user interfaces. It allows you to 
+create reusable UI components and manage 
+state changes in your application. React is a one-way data binding library,
+meaning that it only updates the UI when the state changes, and not the other way around.
+
+Babel:
+Babel is a JavaScript compiler that allows you to write modern JavaScript code
+and compile it to older versions of JavaScript that can be run in older browsers.
+
+Create React App:
+Create React App is a tool that allows you to create a new React project with a
+single command. It sets up a new project with the necessary files and configurations
+for you to start building your React application.
+
+--------------------------------------------------------
+Create a react app using CDN
+steps:
+1. Create a new folder for your project
+2. Create a new file called `index.html` in the root of your project folder.
+3. Add the following code to `index.html`
+4. Create a file app.js
+5. Add the following code to app.js
+6. Attach the app.js to index.js
+7. Open index.html

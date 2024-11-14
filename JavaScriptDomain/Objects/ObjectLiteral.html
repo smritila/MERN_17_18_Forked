@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Creating object using literals</h1>
+    <script>
+      // Creating object using literals
+      let person = {
+        name: "John",
+        age: 30,
+        occupation: "Software Engineer",
+      };
+      //   using . notation
+      console.log(person.name);
+      console.log(person.age);
+      console.log(person.occupation);
+      //   using [] notation
+      console.log(person["name"]);
+      console.log(person["age"]);
+      console.log(person["occupation"]);
+
+      //   for in loop
+      for (let keys in person) {
+        console.log(keys);
+        console.log(person[keys]);
+      }
+    </script>
+  </body>
+</html>

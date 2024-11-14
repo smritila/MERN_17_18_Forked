@@ -1,0 +1,19 @@
+.nav-container > .navbar {
+  background-color: navy;
+  display: flex;
+  /* work when parent is assigned as flexbox */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar > .nav-brand {
+  font-size: 24px;
+  color: white;
+}
+
+.navbar > .nav-link {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}

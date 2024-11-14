@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Adding elements to a div using JS</h1>
+    <div class="parent-div"></div>
+
+    <script>
+      // Get the parent div
+      let parentEle = document.querySelector(".parent-div");
+
+      //   create a new div element
+      let div1 = document.createElement("div");
+      div1.innerHTML = "I am added through JS";
+      //   make div1 child of parentEle
+      parentEle.appendChild(div1);
+
+      //   -------------------------
+      //   create a new table element
+      let table = document.createElement("table");
+      //   create a new table row element
+      let row = document.createElement("tr");
+      //   append row to table
+      row.innerHTML = `
+      <th>Name</th>
+      <th>ID</th>`;
+      table.appendChild(row);
+      document.body.appendChild(table);
+      let row2 = document.createElement("tr");
+      row2.innerHTML = `
+      <td>John Doe</td>
+      <td>12</td>`;
+      table.appendChild(row2);
+    </script>
+  </body>
+</html>

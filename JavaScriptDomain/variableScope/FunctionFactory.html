@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Greet(name) {
+        function Call(message) {
+          console.log(name + " " + message);
+        }
+        return Call;
+      }
+
+      let c = Greet("Richie");
+      c("good morning");
+      c("go to hell");
+
+      //   Implement function factories
+      // to showcase addition,subtraction and multiplication
+      // input = 15,5
+      //   addition = 20
+      //   subtraction = 10
+    </script>
+  </body>
+</html>

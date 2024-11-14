@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JSON</h1>
+    <script>
+      // JSON data
+      let jsonData = '{"name": "Sachin", "age": 40, "country": "India"}';
+      document.write(typeof jsonData + "<br>");
+      //   convert json to object
+      let obj = JSON.parse(jsonData);
+      document.write(typeof obj + "<br>");
+      for (let keys in obj) {
+        document.write(keys + ": " + obj[keys] + "<br>");
+      }
+
+      let objData = {
+        name: "Dhoni",
+        age: 45,
+        country: "India",
+      };
+
+      document.write(typeof objData + "<br>");
+      //   convert object to json
+      let json = JSON.stringify(objData);
+      document.write(json + "<br>");
+    </script>
+  </body>
+</html>

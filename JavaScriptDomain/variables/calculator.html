@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: blue;
+        text-align: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      label,
+      input {
+        padding: 5px;
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Calculator</h1>
+    <form>
+      <label for="num1">Number 1:</label>
+      <input type="number" id="num1" value="0" />
+      <label for="num2">Number 2:</label>
+      <input type="number" id="num2" value="0" />
+      <label for="choice">Choice:</label>
+      <input type="number" id="choice" value="0" />
+      <input type="submit" onclick="handleSubmit()" />
+    </form>
+    <p>
+      Enter the valid choice
+      <br />
+      1. Addition 2. Subtraction 3. Multiplication 4. Division
+    </p>
+    <p>Answer is : <span id="ans"></span></p>
+    <script src="./calculator.js"></script>
+  </body>
+</html>

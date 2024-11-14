@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 40%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="usertable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- rows append here -->
+      </tbody>
+    </table>
+    <script>
+      const obj = [
+        {
+          name: "John",
+          age: 28,
+        },
+        {
+          name: "Alice",
+          age: 25,
+        },
+        {
+          name: "Amith",
+          age: 30,
+        },
+        {
+          name: "Anil",
+          age: 35,
+        },
+        {
+          name: "Arun",
+          age: 40,
+        },
+      ];
+      let table = document
+        .getElementById("usertable")
+        .getElementsByTagName("thead")[0];
+      console.log(table);
+      // Loop through the array
+      for (let item of obj) {
+        // Create a table row element
+        let row = document.createElement("tr");
+        // Create and append the name cell
+        let nameCell = document.createElement("td");
+        nameCell.textContent = item.name;
+        row.appendChild(nameCell);
+        // Create and append the age cell
+        let ageCell = document.createElement("td");
+        ageCell.textContent = item.age;
+        row.appendChild(ageCell);
+        // Append the row to the table body
+        table.appendChild(row);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Callback Revision</h1>
+    <script>
+      function add(a, b, callback1) {
+        setTimeout(() => {
+          let r = a + b;
+          callback1();
+        }, 3000);
+      }
+
+      function sub(addresult, b, callback2) {
+        setTimeout(() => {
+          let r = addresult - b;
+          callback2(r);
+        }, 2000);
+      }
+
+      function mult(subResult, b) {
+        let r = subResult * b;
+      }
+      //   i need to couple add() and sub()
+      // couple => join the two funcs
+      // join => pass the result of add() to sub()
+      //   add(10, 15, sub);
+      add(10, 15, (addResult) => {
+        sub(addResult, 4, (finalResult) => {
+          console.log("final result = ", finalResult);
+        });
+      });
+    </script>
+  </body>
+</html>

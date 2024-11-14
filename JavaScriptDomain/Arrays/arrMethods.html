@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array methods</h1>
+    <script>
+      let arr = ["Apple", "Banana", "Oranges"];
+      console.log(arr);
+
+      //   add a new element to my array in the end
+      arr.push("Grapes");
+      //   add element to the begining
+      arr.unshift("Mango");
+      console.log(arr);
+      //   to remove last element
+      arr.pop();
+      //   to remove first element
+      arr.shift();
+
+      console.log(arr);
+
+      //   replace banana with watermelon
+      //   arr.splice("start index", "end index", "new value")
+      arr.splice(1, 1, "Watermelon");
+      console.log(arr);
+
+      //   insert an element at a given index
+      arr.splice(1, 0, "Pineapple");
+      console.log(arr);
+      // apple , pineapple, watermelon, oranges
+      let basket1 = [arr[0], arr[1]];
+      let basket2 = [arr[2], arr[3]];
+
+      console.log(basket1);
+      console.log(basket2);
+
+      //   use slice function to seperate the array
+      //   arr.slice("start index", "end-index - not considerd")
+      basket1 = arr.slice(0, 2);
+      console.log(basket1);
+      basket2 = arr.slice(2, 4);
+      console.log(basket2);
+    </script>
+  </body>
+</html>

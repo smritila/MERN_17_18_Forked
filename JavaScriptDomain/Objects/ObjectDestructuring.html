@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Object destructuring: 
+     breaking down object into its constituent elements -->
+    <script>
+      const company = {
+        companyLocation: "Bangalore",
+        CEO: "John Doe",
+      };
+      //   let { name, companyLocation, CEO } = company;
+      // document.write(name + "<br>");
+      // document.write(companyLocation + "<br>");
+      // document.write(CEO + "<br>");
+
+      const { name = "Alice Technologies" } = company;
+      document.write(name + "<br>");
+      document.write("------------------------<br>");
+
+      const company1 = {
+        Companyname: "ABC",
+        CEOName: "Juhi",
+        address: {
+          street: "Street 1",
+          pinCode: 123456,
+          city: "Bangalore",
+        },
+      };
+      const {
+        Companyname,
+        CEOName,
+        address: { street, pinCode, city },
+      } = company1;
+      document.write(Companyname + "<br>");
+      document.write(CEOName + "<br>");
+      document.write(street + "<br>");
+      document.write(pinCode + "<br>");
+      document.write(city + "<br>");
+    </script>
+  </body>
+</html>

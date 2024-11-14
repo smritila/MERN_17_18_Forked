@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Construtor</h1>
+    <script>
+      class Bike {
+        constructor(name, brand, color) {
+          this.name = name;
+          this.brand = brand;
+          this.color = color;
+        }
+
+        Print() {
+          document.write(this.name + "<br>");
+          document.write(this.brand + "<br>");
+          document.write(this.color + "<br>");
+        }
+      }
+
+      let bike1 = new Bike("R15", "Yamaha", "Blue");
+      bike1.Print();
+      let bike2 = new Bike("CBR", "honda", "White");
+      bike2.Print();
+    </script>
+  </body>
+</html>

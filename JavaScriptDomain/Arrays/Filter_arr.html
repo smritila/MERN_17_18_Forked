@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ol id="mylist"></ol>
+    <script>
+      let arr = [
+        { name: "John", age: 25 },
+        { name: "Jane", age: 30 },
+        { name: "Bob", age: 35 },
+        { name: "Ajay", age: 15 },
+      ];
+
+      //   print all the names as li who as eligible for driving
+      arr.filter((obj) => {
+        let li = document.createElement("li");
+        if (obj.age >= 18) {
+          li.textContent = obj.name;
+          document.getElementById("mylist").appendChild(li);
+        }
+      });
+    </script>
+  </body>
+</html>

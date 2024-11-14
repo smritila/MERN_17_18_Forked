@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function add(a, b) {
+        let sum = a + b;
+
+        function sub() {
+          let result = sum - 10;
+          console.log(result);
+        }
+        return sub;
+      }
+
+      let r1 = add(15, 20);
+      r1();
+      //   Implement closure that multiplies two numbers
+      // and gives the remainder of the result when divided 5
+    </script>
+  </body>
+</html>

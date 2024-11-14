@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // return keyword is used to return a value from a function
+      function addition(a, b) {
+        let r = a + b;
+        return r;
+      }
+
+      let result = addition(12, 13);
+      console.log(result);
+
+      //   create a arrow function which returns product of two numbers
+      //   create a function expression which returns the remainder of a number when
+      // divided by 10
+      let product = (a, b) => {
+        return a * b;
+      };
+      let p = product(4, 5);
+      console.log(p);
+
+      let divide = function (a, b = 10) {
+        return a % b;
+      };
+      let d = divide(158, 66);
+      console.log(d);
+    </script>
+  </body>
+</html>

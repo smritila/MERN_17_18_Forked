@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>BOM and DOM</h1>
+    <p id="p1">This is a paragraph</p>
+    <script>
+      console.log(window);
+      console.log(window.screen);
+      console.log(window.location);
+
+      console.log(document);
+      let mypara = document.getElementById("p1");
+      console.log(mypara);
+      mypara.innerHTML = "This is new content";
+    </script>
+  </body>
+</html>
