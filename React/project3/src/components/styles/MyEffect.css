@@ -1,0 +1,14 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 0 auto;
+  background-color: lightgray;
+  padding: 15px;
+}
+
+label,
+input {
+  padding: 10px 0 10px 0;
+  margin-top: 5px;
+}
