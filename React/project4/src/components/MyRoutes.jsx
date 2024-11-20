@@ -5,9 +5,9 @@ import Profiles from "./Profiles";
 function MyRoutes() {
   return (
     <BrowserRouter>
-      <Profiles />
       <Routes>
-        <Route path="/:id" element={<SingleProfile />} />
+        <Route path="/" element={<Profiles />} />
+        <Route path="/:id/:name" element={<SingleProfile />} />
       </Routes>
     </BrowserRouter>
   );

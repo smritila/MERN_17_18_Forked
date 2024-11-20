@@ -1,17 +1,10 @@
-import React from "react";
-import { useState } from "react";
-import axios from "axios";
+import React, { useContext } from "react";
+
 import { Link } from "react-router-dom";
+import { ProfilesContext } from "./ProfileContext";
+
 function Profiles() {
-  const [profiles, setProfiles] = useState([]);
-  axios
-    .get("https://jsonplaceholder.typicode.com/users")
-    .then((res) => {
-      setProfiles(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  const profiles = useContext(ProfilesContext);
 
   function displayProfiles() {
     console.log(profiles);
@@ -19,7 +12,7 @@ function Profiles() {
       return (
         <tr key={index}>
           <td>
-            <Link to={`/${profile.id}`}>{profile.id}</Link>
+            <Link to={`/${profile.id}/${profile.name}`}>{profile.id}</Link>
           </td>
           <td>{profile.name}</td>
           <td>{profile.email}</td>
