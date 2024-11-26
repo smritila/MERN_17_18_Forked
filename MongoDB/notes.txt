@@ -5,3 +5,18 @@ Key Features of Mongo DB-
 3. schema less architecture.= it does not follow a predefined schema which allows flexibility.
 scalability- horizontal scalability is done using sharding.
 indexing-suppose secondary index for better query performance.
+aggregation pipeline in Mongo DB- it is used for data handling, data analysis,and data transformations. aggregation pipeline is a framework which allows us to processes data through a series of stages where each stage performs an operation on the data and pass to the next stage.
+
+common stages- $ sign match used to filter documents based on a criteria.example-
+{$match: {age:{gt:18}}}
+
+$group- groups documents based on specified field .
+
+the specified field takes in _id as key which is uniue for each group and the value will be a field from the document. example-{$group:{{_id:"$age"}, {total:{sum:1}}}}
+
+Project- this stage is used to mention the fields that needs to be presented on the output.
+It transforms the document by including or excluding the field.
+
+$unmind- deconstructs an array into multiple documents.
+
+$sort- sorts documents in ascending or decending order. the value taken is alwaysone  1 or -1.
