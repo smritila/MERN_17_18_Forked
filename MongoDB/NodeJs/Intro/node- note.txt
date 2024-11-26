@@ -1,0 +1,30 @@
+node js - it is a runtime environment for js that is used to execute js outside the browser.
+core concepts in node js- 
+1. single threaded model- a single thread processes multiple client request via event loop.
+2. non blocking i/o operation- node js does not wait for an operation to be completed.
+example- reading a file.
+such operations are handled asynchronously .
+
+event driven architecture- node js operates an event loop to handle asynchronous operations like file read/write, or http request etc. 
+
+modules in node js- 
+modules are reusable blocks of code. types of modules are 
+core mudules(inbuilt modules)- ex- http, fs etc.
+
+userdefine module- these are programmer define .
+
+third part modules- they are installed via npm. 
+
+File system module in node js- the fs module gives functionality to interact with files. 
+we can perform operations like reading, writing etc.
+
+writing into a file- fs.write File Sync()- Synchronous
+this functions are used to write new data into a file.every time the function is executed it overrides the previous data. 
+
+
+appending into a file- fs.append File Sync.()- synchronous- these files are used to insert new data into the files without overriding the previous data. 
+
+
+
+
+fs.writeFile(filename, data, callback)-> asynchronous
