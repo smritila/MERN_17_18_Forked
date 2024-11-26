@@ -1,0 +1,7 @@
+Node js is writing into the file asynchronously
+Node js is appending into the file
+
+Node js is appending into the file
+
+Node js is appending into the file
+Node js is appending into the file
