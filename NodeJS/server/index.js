@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 // connect to database
 const connect = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/TicketBooking");
+    await mongoose.connect("mongodb://127.0.0.1:27017/TicketBooking");
     console.log("Connected to database");
   } catch (err) {
     console.log(err);
