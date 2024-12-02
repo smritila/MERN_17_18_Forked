@@ -7,11 +7,57 @@
   </head>
   <body>
     <h1>Fetching data from a express server</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <form>
+      Name: <input type="text" id="stu_name" /> ID:
+      <input type="text" id="stu_id" />
+    </form>
+    <button onclick="getDataById()">Get Data By Id</button>
+    <button>Get Data By Name</button>
     <script>
       fetch("http://localhost:8000/students")
         .then((res) => res.json())
-        .then((res) => console.log(res))
+        .then((res) => display(res))
         .catch((err) => console.log(err));
+
+      function display(students) {
+        console.log(students);
+        let tbody = document.getElementById("tbody");
+        for (let student of students) {
+          let tr = document.createElement("tr");
+          let idCell = document.createElement("td");
+          idCell.innerHTML = student.id;
+          let nameCell = document.createElement("td");
+          nameCell.innerHTML = student.name;
+          let ageCell = document.createElement("td");
+          ageCell.innerHTML = student.age;
+          tr.appendChild(idCell);
+          tr.appendChild(nameCell);
+          tr.appendChild(ageCell);
+          tbody.appendChild(tr);
+        }
+      }
+
+      function getDataById() {
+        let id = document.getElementById("stu_id").value;
+        event.preventDefault();
+        fetch(`http://localhost:8000/students/${id}`)
+          .then((res) => res.json())
+          .then((res) => displaySingleStudent(res))
+          .catch((err) => console.log(err));
+      }
+      function displaySingleStudent(obj) {
+        alert(obj.id + " " + obj.name + " " + obj.age);
+      }
     </script>
   </body>
 </html>

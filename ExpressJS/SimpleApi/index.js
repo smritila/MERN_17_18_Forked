@@ -13,15 +13,37 @@ app.use(cors());
 app.get("/sachin", (req, res) => {
   res.send("Sachin is the best");
 });
+const students = [
+  { id: 1, name: "Sachin", age: 25 },
+  { id: 2, name: "Rahul", age: 30 },
+  { id: 3, name: "Saurav", age: 35 },
+  { id: 4, name: "Kohli", age: 35 },
+];
+
 // simple api to send student data to html page
 app.get("/students", (req, res) => {
-  const students = [
-    { id: 1, name: "Sachin", age: 25 },
-    { id: 2, name: "Rahul", age: 30 },
-    { id: 3, name: "Saurav", age: 35 },
-    { id: 4, name: "Kohli", age: 35 },
-  ];
   res.json(students);
+});
+// write a controller to get single student data
+app.get("/students/:id", (req, res) => {
+  const id = req.params.id;
+  let findStudent = false;
+  let studentDetail = {};
+  for (let student of students) {
+    if (student.id == id) {
+      findStudent = true;
+      studentDetail = student;
+    }
+  }
+  if (findStudent) {
+    res.json(studentDetail);
+  } else {
+    res.json({ message: "Student not found" });
+  }
+});
+app.get("/studentname/:name", (req, res) => {
+  const name = req.params.name;
+  res.json({ message: `Entered name is: ${name}` });
 });
 // start the server
 app.listen(8000, () => {
