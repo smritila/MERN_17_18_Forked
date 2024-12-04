@@ -11,7 +11,6 @@ Write index.html
 
 with a div with id root
 attach app.js with babel cdn in html
-
 ----------------------------------------------------------
 What is react?
 React is a JavaScript library for building user interfaces. It allows you to 

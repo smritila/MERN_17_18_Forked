@@ -1,0 +1,12 @@
+Express js- is a flexible node js framework that provides robust set of features to develop web applications. 
+
+It is used to build server side applications and apis.
+
+Core features - 
+
+Routing - defined url end ppoints(routes) to handle http request.
+
+API development - express js uses RESTFUL endpoints that handle requests and provides response.
+API is a set of end points that allow communication between to different softwares.
+
+// http frame format - draw a diagram.- study all. 

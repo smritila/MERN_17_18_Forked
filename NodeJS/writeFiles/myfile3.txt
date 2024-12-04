@@ -1,0 +1,4 @@
+Writing new data into file the file Node JS is appending into the file
+Node JS is appending into the file
+
+Node JS is appending into the file
