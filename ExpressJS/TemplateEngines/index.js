@@ -14,10 +14,18 @@ app.use(express.static("./public"));
 app.get("/", (req, res) => {
   res.render("index", {
     title: "EJS intro",
-    name: "Balaji",
+    name: "Smritikana",
   });
 });
 
 app.listen(port, () => {
   console.log("server running on ", port);
 });
+
+/**
+ * Task
+ * Change the title & name in the index.ejs file by reading the values from query params
+ * Ex - If URL is - http://localhost:8000/?name=Richie&Title=Templating
+ * Then the title and name should be "Templating" and "Richie" in the webpage respectively
+ * Only use Google!!
+ */
