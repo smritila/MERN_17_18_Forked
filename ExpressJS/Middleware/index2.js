@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 function m1(req, res, next) {
-  console.log(req.params.id);
+  // console.log(req.params.id);
   console.log("middle 1");
   next();
 }
