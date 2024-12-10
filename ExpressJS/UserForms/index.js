@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const connect = () => {
   try {
-    mongoose.connect("mongodb://localhost:27017/FormRegistration");
+    mongoose.connect("mongodb://127.0.0.1:27017/FormRegistration");
     console.log("Connected to MongoDB");
   } catch (err) {
     console.log(err.message);
