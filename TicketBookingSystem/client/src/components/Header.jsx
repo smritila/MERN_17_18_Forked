@@ -7,23 +7,18 @@ function Header() {
     <nav className="navbar">
       <div className="nav-brand">My Brand</div>
       <div className="nav-links">
-        <ul>
-          <li>
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/register" className="nav-link">
-              Register
-            </Link>
-          </li>
-          <li>
-            <Link to="/login" className="nav-link">
-              Login
-            </Link>
-          </li>
-        </ul>
+        <Link to="/" className="navbar-link">
+          Home
+        </Link>
+        <Link to="/register" className="navbar-link">
+          Register
+        </Link>
+        <Link to="/login" className="navbar-link">
+          Login
+        </Link>
+        <Link to="/places" className="navbar-link">
+          Places
+        </Link>
       </div>
     </nav>
   );
