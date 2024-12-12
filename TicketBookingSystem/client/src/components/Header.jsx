@@ -4,7 +4,7 @@ import "../styles/Header.css";
 
 function Header() {
   return (
-    <nav className="navbar">
+    <nav className="navbar navbar-light bg-success">
       <div className="nav-brand">My Brand</div>
       <div className="nav-links">
         <Link to="/" className="navbar-link">
