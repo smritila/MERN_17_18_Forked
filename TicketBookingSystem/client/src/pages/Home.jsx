@@ -21,12 +21,12 @@ function Home() {
   function displayPlaces() {
     return places.map((place, index) => {
       return (
-        <div key={index}>
+        <div key={index} className="col border border-primary m-2 p-2">
           <h2>{place.placeName}</h2>
           <p>{place.placeDescription}</p>
           <p>{place.placeAddress}</p>
           <Link to={`/places/${place._id}`}>
-            <button>Book Now</button>
+            <button className="btn btn-primary">Book Now</button>
           </Link>
         </div>
       );
@@ -35,9 +35,15 @@ function Home() {
 
   return (
     <Layout>
-      <h2>Select your travel destination</h2>
+      <h2 className="fw-semibold text-center text-warning p-2">
+        {" "}
+        Book your next trip
+      </h2>
       {/* fetch the places from the data into home page */}
-      {displayPlaces()}
+      {/* {displayPlaces()} */}
+      <div className="container m-2">
+        <div className="row">{displayPlaces()}</div>
+      </div>
     </Layout>
   );
 }
