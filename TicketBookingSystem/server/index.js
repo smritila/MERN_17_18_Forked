@@ -6,6 +6,8 @@ const cors = require("cors"); //cross-origin-resource-sharing
 // import routes
 const userRoutes = require("./routes/userRoutes");
 const placeRoutes = require("./routes/placeRoutes");
+const ticketRoutes = require("./routes/ticketRoutes");
+
 const connect = () => {
   try {
     mongoose.connect("mongodb://127.0.0.1:27017/TicketManagement");
@@ -23,6 +25,7 @@ app.get("/", (req, res) => {
 // call user routes
 app.use("/users", userRoutes);
 app.use("/places", placeRoutes);
+app.use("/tickets", ticketRoutes);
 const PORT = 8000;
 app.listen(PORT, () => {
   console.log("server is listening on port ", PORT);
