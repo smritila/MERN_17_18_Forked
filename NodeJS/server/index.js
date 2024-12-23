@@ -3,18 +3,6 @@ const fs = require("fs");
 const path = require("path");
 const url = require("url");
 
-// import mongoose
-const mongoose = require("mongoose");
-
-// connect to database
-const connect = async () => {
-  try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/TicketBooking");
-    console.log("Connected to database");
-  } catch (err) {
-    console.log(err);
-  }
-};
 // create a server
 const server = http.createServer((req, res) => {
   // response.write("Hello from server");
@@ -44,3 +32,16 @@ server.listen(8000, () => {
   connect();
   console.log(`Server is running on http://localhost:${PORT}/`);
 });
+
+// import mongoose
+/*const mongoose = require("mongoose");
+
+// connect to database
+const connect = async () => {
+  try {
+    await mongoose.connect("mongodb://127.0.0.1:27017/TicketBooking");
+    console.log("Connected to database");
+  } catch (err) {
+    console.log(err);
+  }
+};*/
